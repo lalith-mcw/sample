@@ -1,0 +1,67 @@
+{
+  "requirements": {
+    "yellowWallpaper": false,
+    "waxingMoon": true,
+    "SSD": true,
+    "vram": 3000,
+    "foos": 6
+  },
+  "tests": [
+    {
+      "name": "Sleep1",
+      "parameters": [
+        [
+        ]
+      ]
+    },
+    {
+      "name": "Sleep2",
+      "parameters": [
+        [
+          {
+            "parameter": "Time",
+            "value": "1",
+            "description": "1 second(s)"
+          },
+          {
+            "parameter": "GPU",
+            "value": "id:0",
+            "description": "NVIDIA 1234 Ti"
+          },
+          {
+            "parameter": "Option",
+            "value": "Opt1",
+            "description": "Option1"
+          }
+        ],
+        [
+          {
+            "parameter": "Time",
+            "value": "2",
+            "description": "2 second(s)"
+          },
+          {
+            "parameter": "GPU",
+            "value": "id:0",
+            "description": "AMD 5678XT"
+          },
+          {
+            "parameter": "Option",
+            "value": "Opt2",
+            "description": "Option2"            
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Sleep3",
+      "parameters": [ []
+      ]
+    },
+    {
+      "name": "Sleep4",
+      "parameters": [ []
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+[2021-12-23T16:02:01] Successfull validation with C:\Users\amduser\Downloads\Lalith\SPEC\SPECworkstation\workloads\pezcore\schema\reference_schema_files\workload_schema.json
+[2021-12-23T16:02:01] Workload [pezcore] : Checking requirements
+[2021-12-23T16:02:01] Workload [pezcore] : Generating parameters
+[2021-12-23T16:02:01] Executing command [bin\timed_sleep 1 --generateParams]
+[2021-12-23T16:02:02] Execution complete. Cleaning up.
+[2021-12-23T16:02:02] Successfull validation with C:\Users\amduser\Downloads\Lalith\SPEC\SPECworkstation\workloads\pezcore\schema\reference_schema_files\query_schema.json

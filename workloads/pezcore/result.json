@@ -1,0 +1,160 @@
+{
+    "workloadName": "pezcore",
+    "workloadDescription": "pezcore devkit: modify this to make your own SPECworkstation workload",
+    "workloadVersion": "0.1.0",
+    "referenceRunTimeSeconds": 65,
+    "workloadSetup": {
+        "command": "bin\\timed_sleep 1 --generateParams",
+        "output": "query.json"
+    },
+    "workloadFiles": [
+        {
+            "fileName": "bin\\timed_sleep.exe",
+            "hashValue": 15600251118843734484
+        },
+        {
+            "fileName": "bin\\README.txt",
+            "hashValue": 0
+        },
+        {
+            "fileName": "data\\README.txt",
+            "hashValue": 11622831125196690378
+        }
+    ],
+    "cleanupFiles": [
+        "bin\\README.txt",
+        "data\\README*.txt",
+        "output\\"
+    ],
+    "tests": [
+        {
+            "name": "Sleep1",
+            "description": "Sleep 1 Seconds",
+            "command": "bin\\timed_sleep 1",
+            "baselineScore": 5,
+            "weight": 0.25,
+            "timeOutMinutes": 1,
+            "scoreDescription": "seconds",
+            "scoringMethod": "lower",
+            "validateRegex": "Timed_Sleep has awoken!",
+            "scoreRegex": "Timed_Sleep took ([0-9]*.[0-9]*) seconds.",
+            "metadata": {
+                "status": "Timed_Sleep has awoken!",
+                "scoreString": "Timed_Sleep took 1 seconds."
+            },
+            "parameters": [],
+            "resultScore": 1.0
+        },
+        {
+            "name": "Sleep2",
+            "description": "Sleep 2 Seconds",
+            "command": "bin\\timed_sleep 1 --device id:0 --option Opt1",
+            "baselineScore": 10,
+            "weight": 0.25,
+            "timeOutMinutes": 2,
+            "scoreDescription": "seconds",
+            "scoringMethod": "lower",
+            "validateRegex": "Timed_Sleep has awoken!",
+            "scoreRegex": "Timed_Sleep took ([0-9]*.[0-9]*) seconds.",
+            "cleanupFiles": [
+                "bin\\README.txt",
+                "data\\README*.txt",
+                "output\\"
+            ],
+            "parameters": [
+                {
+                    "parameter": "Time",
+                    "value": "1",
+                    "description": "1 second(s)"
+                },
+                {
+                    "parameter": "GPU",
+                    "value": "id:0",
+                    "description": "NVIDIA 1234 Ti"
+                },
+                {
+                    "parameter": "Option",
+                    "value": "Opt1",
+                    "description": "Option1"
+                }
+            ],
+            "resultScore": 1.0
+        },
+        {
+            "name": "Sleep2",
+            "description": "Sleep 2 Seconds",
+            "command": "bin\\timed_sleep 2 --device id:0 --option Opt2",
+            "baselineScore": 10,
+            "weight": 0.25,
+            "timeOutMinutes": 2,
+            "scoreDescription": "seconds",
+            "scoringMethod": "lower",
+            "validateRegex": "Timed_Sleep has awoken!",
+            "scoreRegex": "Timed_Sleep took ([0-9]*.[0-9]*) seconds.",
+            "cleanupFiles": [
+                "bin\\README.txt",
+                "data\\README*.txt",
+                "output\\"
+            ],
+            "parameters": [
+                {
+                    "parameter": "Time",
+                    "value": "2",
+                    "description": "2 second(s)"
+                },
+                {
+                    "parameter": "GPU",
+                    "value": "id:0",
+                    "description": "AMD 5678XT"
+                },
+                {
+                    "parameter": "Option",
+                    "value": "Opt2",
+                    "description": "Option2"
+                }
+            ],
+            "resultScore": 2.0
+        },
+        {
+            "name": "Sleep3",
+            "description": "Sleep 3 Seconds",
+            "command": "bin\\timed_sleep 3",
+            "baselineScore": 20,
+            "weight": 0.25,
+            "scoreDescription": "seconds",
+            "scoringMethod": "lower",
+            "validateRegex": "Timed_Sleep has awoken!",
+            "scoreRegex": "Timed_Sleep took ([0-9]*.[0-9]*) seconds.",
+            "cleanupFiles": [
+                "bin\\README.txt",
+                "data\\README*.txt",
+                "output\\"
+            ],
+            "parameters": [],
+            "resultScore": 3.0
+        },
+        {
+            "name": "Sleep4",
+            "description": "Sleep 4 Seconds",
+            "command": "bin\\timed_sleep 4",
+            "baselineScore": 30,
+            "weight": 0.25,
+            "scoreDescription": "seconds",
+            "scoringMethod": "lower",
+            "validateRegex": "Timed_Sleep has awoken!",
+            "scoreRegex": "Timed_Sleep took ([0-9]*.[0-9]*) seconds.",
+            "cleanupFiles": [
+                "bin\\README.txt",
+                "data\\README*.txt",
+                "output\\"
+            ],
+            "parameters": [],
+            "resultScore": 4.0
+        }
+    ],
+    "dateTime": "2021-12-23T09:58:06Z",
+    "warnings": [
+        "Unable to verify benchmark files."
+    ],
+    "resultScore": 6.597539553864471
+}

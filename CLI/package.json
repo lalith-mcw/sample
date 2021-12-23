@@ -1,0 +1,9 @@
+{
+  "name": "SPECworkstation",
+  "bin": "./main.js",
+  "pkg":{
+  "scripts": "./main.js",
+  "assets": "officialRun.json",
+  "targets": ["node14-win-x64"]
+  }
+}

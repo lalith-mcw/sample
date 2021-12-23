@@ -1,0 +1,14 @@
+{
+	"workloads": [
+		{
+			"name": "krato",
+			"version": "0.1.0",
+			"hash": "bea3dce324c30ca8166f7f42df7181d5"
+		},
+		{
+			"name": "pezcore",
+			"version": "0.1.0",
+			"hash": "b15077f8bf3deeed39999e8f54c128ca"
+		}
+	]
+}
